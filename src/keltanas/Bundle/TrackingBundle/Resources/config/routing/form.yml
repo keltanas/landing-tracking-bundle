@@ -1,0 +1,30 @@
+keltanas_tracking_form:
+    pattern:  /
+    defaults: { _controller: "keltanasTrackingBundle:Form:index" }
+
+keltanas_tracking_form_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "keltanasTrackingBundle:Form:show" }
+
+keltanas_tracking_form_new:
+    pattern:  /new
+    defaults: { _controller: "keltanasTrackingBundle:Form:new" }
+
+keltanas_tracking_form_create:
+    pattern:  /create
+    defaults: { _controller: "keltanasTrackingBundle:Form:create" }
+    requirements: { _method: post }
+
+keltanas_tracking_form_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "keltanasTrackingBundle:Form:edit" }
+
+keltanas_tracking_form_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "keltanasTrackingBundle:Form:update" }
+    requirements: { _method: post|put }
+
+keltanas_tracking_form_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "keltanasTrackingBundle:Form:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,14 @@
+<body>
+<h1>{{ 'sent.request.form'|trans }}</h1>
+<ul>
+    <li>{{ 'form'|trans }}: {{ data.entity.name }}</li>
+    <li>{{ 'title'|trans }}: {{ data.entity.title }}</li>
+    <li>{{ 'button'|trans }}: {{ data.entity.button }}</li>
+    <li>{{ 'name'|trans }}: {{ data.name }}</li>
+    <li>{{ 'phone'|trans }}: {{ data.phone }}</li>
+    <li>{{ 'ip'|trans }}: {{ app.request.clientIp }}</li>
+{% if history %}
+    {% include 'keltanasTrackingBundle::_history.html.twig' %}
+{% endif %}
+</ul>
+</body>

@@ -1,0 +1,13 @@
+{% extends '::base.html.twig' %}
+
+{% block title 'tracking bundle'|trans %}
+
+{% block body %}
+    <h1>{{ block('title') }}</h1>
+
+    <ul>
+        <li><a href="{{ path('keltanas_tracking_homepage') }}">{{ 'tracking.homepage'|trans }}</a></li>
+        <li><a href="{{ path('keltanas_tracking_form') }}">{{ 'tracking.forms'|trans }}</a></li>
+        <li><a href="{{ path('keltanas_tracking_rfq') }}">{{ 'tracking.rfqs'|trans }}</a></li>
+    </ul>
+{% endblock %}

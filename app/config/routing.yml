@@ -1,0 +1,7 @@
+keltanas_tracking_bundle:
+    resource: "@keltanasTrackingBundle/Resources/config/routing.yml"
+    prefix:   /tracking
+
+keltanas_tracking_bundle_test:
+    pattern:  /
+    defaults: { _controller: "keltanasTrackingBundle:Default:test" }

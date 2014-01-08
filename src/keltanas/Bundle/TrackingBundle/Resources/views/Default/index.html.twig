@@ -1,0 +1,39 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}{{ 'dashboard'|trans|capitalize }}{% endblock title %}
+
+{% block body %}
+<div class="container">
+    <h1><i class="glyphicon glyphicon-dashboard"></i> {{ block('title') }}</h1>
+
+    <ul>
+        <li><a href="{{ path('keltanas_tracking_list') }}">{{ 'tracking list'|trans|capitalize }}</a></li>
+    </ul>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h3>UTMSource grouping <small>({{ dateToday|date('Y-m-d') }})</small></h3>
+            <table class="table table-striped">
+                {% for s in sourcesToday %}
+                    <tr>
+                        <td>{{ s.utmSource|default('&mdash;')|raw }}</td>
+                        <td>{{ s.sourceCount }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="col-md-6">
+            <h3>UTMSource grouping <small>({{ dateYesterday|date('Y-m-d') }})</small></h3>
+            <table class="table table-striped">
+                {% for s in sourcesYesterday %}
+                    <tr>
+                        <td>{{ s.utmSource|default('&mdash;')|raw }}</td>
+                        <td>{{ s.sourceCount }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock body %}
+

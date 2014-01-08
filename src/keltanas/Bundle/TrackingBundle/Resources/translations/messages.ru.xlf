@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="ru" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="4ee972120bcda675f75222c87cb9d356" resname="Who">
+        <source>Who</source>
+        <target>Кто</target>
+      </trans-unit>
+      <trans-unit id="f31bbdd1b3e85bccd652680e16935819" resname="Source">
+        <source>Source</source>
+        <target>Исходник</target>
+      </trans-unit>
+      <trans-unit id="87f8a6ab85c9ced3702b4ea641ad4bb5" resname="Medium">
+        <source>Medium</source>
+        <target>Средний</target>
+      </trans-unit>
+      <trans-unit id="f00a1d99f6f47917006e88a803ecde1f" resname="Campaign">
+        <source>Campaign</source>
+        <target>Кампания</target>
+      </trans-unit>
+      <trans-unit id="f15c1cae7882448b3fb0404682e17e61" resname="Content">
+        <source>Content</source>
+        <target>Содержание</target>
+      </trans-unit>
+      <trans-unit id="cf5f3091e30dee6597885d8c0e0c357f" resname="Term">
+        <source>Term</source>
+        <target>Термин</target>
+      </trans-unit>
+      <trans-unit id="1325707fcc94e967cae1576d0c61d409" resname="How">
+        <source>How</source>
+        <target>Как</target>
+      </trans-unit>
+      <trans-unit id="8eea62084ca7e541d918e823422bd82e" resname="Result">
+        <source>Result</source>
+        <target>Результат</target>
+      </trans-unit>
+      <trans-unit id="dc7161be3dbf2250c8954e560cc35060" resname="dashboard">
+        <source>dashboard</source>
+        <target>панель управления</target>
+      </trans-unit>
+      <trans-unit id="1d1aab1f44c7fdf034d0b9ac3c7df589" resname="tracking list">
+        <source>tracking list</source>
+        <target>список отслеживания</target>
+      </trans-unit>
+      <trans-unit id="ec71e6ab4aa765fbf0ce1dfc93f40776" resname="Form list">
+        <source>Form list</source>
+        <target>Списко форм</target>
+      </trans-unit>
+      <trans-unit id="b80bb7740288fda1f201890375a60c8f" resname="id">
+        <source>id</source>
+        <target>ид</target>
+      </trans-unit>
+      <trans-unit id="b068931cc450442b63f5b3d276ea4297" resname="name">
+        <source>name</source>
+        <target>Наименование</target>
+      </trans-unit>
+      <trans-unit id="0c83f57c786a0b4a39efab23731c7ebc" resname="email">
+        <source>email</source>
+        <target>email</target>
+      </trans-unit>
+      <trans-unit id="d5d3db1765287eef77d7927cc956f50a" resname="title">
+        <source>title</source>
+        <target>заголовок</target>
+      </trans-unit>
+      <trans-unit id="ce50a09343724eb82df11390e2c1de18" resname="button">
+        <source>button</source>
+        <target>кнопка</target>
+      </trans-unit>
+      <trans-unit id="cfdebd33ee18f6a4e58822dbfb1cf1a7" resname="arrangement">
+        <source>arrangement</source>
+        <target>положение</target>
+      </trans-unit>
+      <trans-unit id="ebb67a4271abe715344471b0f16321f6" resname="actions">
+        <source>actions</source>
+        <target>действия</target>
+      </trans-unit>
+      <trans-unit id="b11956aa0ecd600a35744b16e9f7d1aa" resname="create.new.entry">
+        <source>create.new.entry</source>
+        <target>создать новую запись</target>
+      </trans-unit>
+      <trans-unit id="716f6b30598ba30945d84485e61c1027" resname="close">
+        <source>close</source>
+        <target>закрыть</target>
+      </trans-unit>
+      <trans-unit id="ecd048a9ad56a0e96be998416207fc0c" resname="form.edit">
+        <source>form.edit</source>
+        <target>редактировать</target>
+      </trans-unit>
+      <trans-unit id="b312ffd6f5500855123f832c42f2e313" resname="back.to.list">
+        <source>back.to.list</source>
+        <target>назад к списку</target>
+      </trans-unit>
+      <trans-unit id="7b1f056926a5ccaa367bfab2d5e81419" resname="form.creation">
+        <source>form.creation</source>
+        <target>создание формы</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

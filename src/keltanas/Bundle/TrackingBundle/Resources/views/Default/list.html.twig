@@ -1,0 +1,41 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}{{ 'tracking list'|trans|capitalize }}{% endblock title %}
+
+{% block body %}
+<div class="container">
+    <h1><i class="glyphicon glyphicon-dashboard"></i> {{ block('title') }}
+        <small><a href="{{ path('keltanas_tracking_homepage') }}">{{ 'dashboard'|trans|capitalize }}</a></small></h1>
+    <div class="count">
+        Всего: {{ history.getTotalItemCount }}
+    </div>
+    <div class="navigation">
+        {{ knp_pagination_render(history) }}
+    </div>
+
+    <table class="table table-striped">
+        <tr>
+            <th>{{ knp_pagination_sortable(history, 'ip', 'h.ip') }}</th>
+            <th>{{ knp_pagination_sortable(history, 'ua', 'h.ua') }}</th>
+            <th>{{ knp_pagination_sortable(history, 'term', 'h.utmTerm') }}</th>
+            <th>{{ knp_pagination_sortable(history, 'counter', 'h.counter') }}</th>
+            <th>{{ knp_pagination_sortable(history, 'trackingAt', 'h.trackingAt') }}</th>
+        </tr>
+        {% for h in history %}
+            <tr>
+                <td><small><b>ip: {{ h.ip }}</b><br>
+                        url: {{ h.uri|raw }}<br>
+                        ref: {{ h.referer|raw }}</small></td>
+                <td><small>{{ h.ua }}</small></td>
+                <td><small>{{ h.utmTerm }}</small></td>
+                <td>{{ h.counter }}</td>
+                <td class="nowrap"><small>{{ h.trackingAt|date('Y-m-d H:i') }}</small></td>
+            </tr>
+        {% endfor %}
+    </table>
+    <div class="navigation">
+        {{ knp_pagination_render(history) }}
+    </div>
+</div>
+{% endblock body %}
+

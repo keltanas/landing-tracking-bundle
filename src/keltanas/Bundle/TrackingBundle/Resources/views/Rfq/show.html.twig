@@ -1,0 +1,97 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+<div class="container">
+    <h1>Rfq</h1>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h3>{{ 'Who'|trans }}</h3>
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <td>{{ entity.name }}</td>
+                </tr>
+                <tr>
+                    <th>Phone</th>
+                    <td>{{ entity.phone }}</td>
+                </tr>
+                <tr>
+                    <th>Ip</th>
+                    <td>{{ entity.ip }}</td>
+                </tr>
+                <tr>
+                    <th>Createdat</th>
+                    <td>{{ entity.createdAt|date('Y-m-d H:i:s') }}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <h3>{{ 'Source'|trans }}</h3>
+            <table class="table">
+                <tr>
+                    <th>{{ 'Source'|trans }}</th>
+                    <td>{{ entity.history.utmSource }}</td>
+                </tr>
+                <tr>
+                    <th>{{ 'Medium'|trans }}</th>
+                    <td>{{ entity.history.utmMedium }}</td>
+                </tr>
+                <tr>
+                    <th>{{ 'Campaign'|trans }}</th>
+                    <td>{{ entity.history.utmCampaign }}</td>
+                </tr>
+                <tr>
+                    <th>{{ 'Content'|trans }}</th>
+                    <td>{{ entity.history.utmContent }}</td>
+                </tr>
+                <tr>
+                    <th>{{ 'Term'|trans }}</th>
+                    <td>{{ entity.history.utmTerm }}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <h3>{{ 'How'|trans }}</h3>
+            <table class="table">
+                <tr>
+                    <th>Title</th>
+                    <td>{{ entity.form.title }}</td>
+                </tr>
+                <tr>
+                    <th>Button</th>
+                    <td>{{ entity.form.button }}</td>
+                </tr>
+                <tr>
+                    <th>Number entry</th>
+                    <td>{{ entity.numberEntry }}</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    <h3>{{ 'Result'|trans }}</h3>
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Status</th>
+                <td>{{ entity.status }}</td>
+            </tr>
+            <tr>
+                <th>Result</th>
+                <td>{{ entity.result }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>
+        <a href="{{ path('keltanas_tracking_rfq') }}" class="btn btn-default">
+            Back to the list
+        </a>
+        <a href="{{ path('keltanas_tracking_rfq_edit', { 'id': entity.id }) }}" class="btn btn-warning">
+            Edit
+        </a>
+    </p>
+        {#<li>{{ form(delete_form) }}</li>#}
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+<li>{{ 'id'|trans }}: {{ history.id }}</li>
+<li>{{ 'referal'|trans }}: {{ history.referer }}</li>
+<li>{{ 'browser'|trans }}: {{ history.ua }}</li>
+<li>{{ 'begin page'|trans }}: {{ history.uri }}</li>
+<li>{{ 'first visit' }}: {{ history.trackingAt|date('Y-m-d H:i:s') }}</li>
+<li>{{ 'total visits'|trans }}: {{ history.counter }}</li>
+<li>utm_source: {{ history.utmSource }}</li>
+<li>utm_medium: {{ history.utmMedium }}</li>
+<li>utm_campaign: {{ history.utmCampaign }}</li>
+<li>utm_content: {{ history.utmContent }}</li>
+{% if history.tail %}
+    <li>{{ 'tail'|trans }}:
+        <ul>
+            {% for key, t in history.tail %}
+                <li>{{ key }}: {{ t }}</li>
+            {% endfor %}
+        </ul>
+    </li>
+{% endif %}

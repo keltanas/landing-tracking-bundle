@@ -1,0 +1,30 @@
+keltanas_tracking_rfq:
+    pattern:  /
+    defaults: { _controller: "keltanasTrackingBundle:Rfq:index" }
+
+keltanas_tracking_rfq_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "keltanasTrackingBundle:Rfq:show" }
+
+keltanas_tracking_rfq_new:
+    pattern:  /new
+    defaults: { _controller: "keltanasTrackingBundle:Rfq:new" }
+
+keltanas_tracking_rfq_create:
+    pattern:  /create
+    defaults: { _controller: "keltanasTrackingBundle:Rfq:create" }
+    requirements: { _method: post }
+
+keltanas_tracking_rfq_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "keltanasTrackingBundle:Rfq:edit" }
+
+keltanas_tracking_rfq_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "keltanasTrackingBundle:Rfq:update" }
+    requirements: { _method: post|put }
+
+keltanas_tracking_rfq_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "keltanasTrackingBundle:Rfq:delete" }
+    requirements: { _method: post|delete }

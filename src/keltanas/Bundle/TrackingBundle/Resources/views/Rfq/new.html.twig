@@ -1,0 +1,23 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+<div class="container">
+    <h1>Rfq creation</h1>
+
+    {% for flashMessage in app.session.flashbag.get('error') %}
+        <div class="alert alert-danger">
+            {{ flashMessage }}
+        </div>
+    {% endfor %}
+
+    {{ form(form) }}
+
+    <ul class="record_actions">
+        <li>
+            <a href="{{ path('keltanas_tracking_rfq') }}">
+                Back to the list
+            </a>
+        </li>
+    </ul>
+</div>
+{% endblock %}

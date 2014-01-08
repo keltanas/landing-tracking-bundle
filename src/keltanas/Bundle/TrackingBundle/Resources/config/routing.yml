@@ -1,0 +1,19 @@
+keltanas_tracking_homepage:
+    pattern:  /
+    defaults: { _controller: keltanasTrackingBundle:Default:index }
+
+keltanas_tracking_list:
+    pattern:  /list
+    defaults: { _controller: keltanasTrackingBundle:Default:list }
+
+keltanas_tracking_form:
+    pattern:  /form/serve/{name}
+    defaults: { _controller: keltanasTrackingBundle:Form:serve }
+
+keltanas_tracking_form_crud:
+    resource: "@keltanasTrackingBundle/Resources/config/routing/form.yml"
+    prefix:   /admin/form
+
+keltanasTrackingBundle_rfq:
+    resource: "@keltanasTrackingBundle/Resources/config/routing/rfq.yml"
+    prefix:   /admin/rfq

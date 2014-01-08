@@ -1,0 +1,23 @@
+parameters:
+    keltanas_trackingbundle.postman.class: keltanas\Bundle\TrackingBundle\Component\Postman
+    keltanas_trackingbundle.form.class: keltanas\Bundle\TrackingBundle\Form\AdaptiveFormType
+    keltanas_trackingbundle.request_referer.listener.class: keltanas\Bundle\TrackingBundle\EventListener\RequestRefererListener
+    keltanas_trackingbundle.promo_code.listener.class: keltanas\Bundle\TrackingBundle\EventListener\PromoCodeListener
+
+services:
+    keltanas.postman:
+        class: %keltanas_trackingbundle.postman.class%
+        arguments: [ %keltanas_tracking%, @mailer, @templating, @doctrine.orm.default_entity_manager]
+
+    keltanas.trackingbundle.listener.request_referer:
+        class: %keltanas_trackingbundle.request_referer.listener.class%
+        arguments: [@doctrine.orm.default_entity_manager, %kernel.debug%]
+        tags:
+            - { name: kernel.event_listener, event: kernel.response, method: onKernelResponse }
+
+    keltanas.trackingbundle.listener.promo_code:
+        class: %keltanas_trackingbundle.promo_code.listener.class%
+        arguments: [@doctrine.orm.default_entity_manager, %kernel.debug%]
+        tags:
+            - { name: kernel.event_listener, event: kernel.response, method: onKernelResponse }
+

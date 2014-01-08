@@ -67,8 +67,6 @@ class RequestRefererListener
                 $history->setUa($request->headers->get('User-Agent'));
                 $history->setUri($request->getUri());
                 $history->setCounter(1);
-                $botList = ['bot', 'indy', 'YaDirectFetcher'];
-                $history->setBot(preg_match('/'.join('|', $botList).'/i', $history->getUa()));
 
                 if ($request->query->get('utm_source')) {
                     $tail = $request->query->all();

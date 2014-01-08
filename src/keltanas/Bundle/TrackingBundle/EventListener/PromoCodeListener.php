@@ -36,7 +36,7 @@ class PromoCodeListener
     {
         $event->getResponse()->setContent(
             str_replace('<!--promocode-->',
-                substr($event->getRequest()->cookies->get('tracker_id'), -6, 6),
+                substr($event->getRequest()->cookies->get('tracker_id'), 0, 6),
                 $event->getResponse()->getContent()
             )
         );

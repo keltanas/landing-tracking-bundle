@@ -192,6 +192,9 @@ class History
     public function setUa($ua)
     {
         $this->ua = $ua;
+        $botList = ['bot', 'indy', 'YaDirectFetcher'];
+
+        $this->setBot(preg_match('/'.join('|', $botList).'/i', $ua));
 
         return $this;
     }

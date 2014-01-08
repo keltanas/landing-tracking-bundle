@@ -6,7 +6,7 @@ keltanas_tracking_list:
     pattern:  /list
     defaults: { _controller: keltanasTrackingBundle:Default:list }
 
-keltanas_tracking_form:
+keltanas_tracking_form_serve:
     pattern:  /form/serve/{name}
     defaults: { _controller: keltanasTrackingBundle:Form:serve }
 

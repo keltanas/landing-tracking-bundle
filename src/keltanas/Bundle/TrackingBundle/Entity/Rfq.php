@@ -10,7 +10,7 @@ use keltanas\Bundle\TrackingBundle\Entity\History;
  * Rfq
  *
  * @ORM\Table(name="keltanas_rfq")
- * @ORM\Entity(repositoryClass="keltanas\TrackingBundle\Entity\RfqRepository")
+ * @ORM\Entity(repositoryClass="keltanas\Bundle\TrackingBundle\Entity\RfqRepository")
  */
 class Rfq
 {

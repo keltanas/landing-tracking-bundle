@@ -37,7 +37,7 @@ class FormController extends Controller
         }
 
         $form = $this->createForm(new AdaptiveFormType($entity), null, [
-            'action' => $this->generateUrl('keltanas_tracking_form', ['name'=>$name]),
+            'action' => $this->generateUrl('keltanas_tracking_form_serve', ['name'=>$name]),
         ]);
 
         $form->handleRequest($request);

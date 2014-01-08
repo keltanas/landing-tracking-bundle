@@ -44,7 +44,7 @@
       </trans-unit>
       <trans-unit id="ec71e6ab4aa765fbf0ce1dfc93f40776" resname="Form list">
         <source>Form list</source>
-        <target>Списко форм</target>
+        <target>список форм</target>
       </trans-unit>
       <trans-unit id="b80bb7740288fda1f201890375a60c8f" resname="id">
         <source>id</source>
@@ -52,7 +52,7 @@
       </trans-unit>
       <trans-unit id="b068931cc450442b63f5b3d276ea4297" resname="name">
         <source>name</source>
-        <target>Наименование</target>
+        <target>наименование</target>
       </trans-unit>
       <trans-unit id="0c83f57c786a0b4a39efab23731c7ebc" resname="email">
         <source>email</source>
@@ -93,6 +93,58 @@
       <trans-unit id="7b1f056926a5ccaa367bfab2d5e81419" resname="form.creation">
         <source>form.creation</source>
         <target>создание формы</target>
+      </trans-unit>
+      <trans-unit id="3f9fb4f111290c14343e6c89e5744944" resname="tracking bundle">
+        <source>tracking bundle</source>
+        <target>бандл слежения</target>
+      </trans-unit>
+      <trans-unit id="329f371a87b0f6c827907eae564402af" resname="tracking.homepage">
+        <source>tracking.homepage</source>
+        <target>бандл слежения</target>
+      </trans-unit>
+      <trans-unit id="678203eef9e8d278552576a9f170ce86" resname="tracking.forms">
+        <source>tracking.forms</source>
+        <target>формы</target>
+      </trans-unit>
+      <trans-unit id="6d34253b48e310f42935b39637cb9a24" resname="tracking.rfqs">
+        <source>tracking.rfqs</source>
+        <target>заявки</target>
+      </trans-unit>
+      <trans-unit id="b3b632d648cc02c0c3c9fbc2e5b79f62" resname="sent.request.form">
+        <source>sent.request.form</source>
+        <target>отправить форму запроса</target>
+      </trans-unit>
+      <trans-unit id="3fcdb73d36d54f2cc22d0f68e6b6e182" resname="form">
+        <source>form</source>
+        <target>форма</target>
+      </trans-unit>
+      <trans-unit id="f7a42fe7211f98ac7a60a285ac3a9e87" resname="phone">
+        <source>phone</source>
+        <target>телефон</target>
+      </trans-unit>
+      <trans-unit id="957b527bcfbad2e80f58d20683931435" resname="ip">
+        <source>ip</source>
+        <target>ip</target>
+      </trans-unit>
+      <trans-unit id="6ecb1f4adb2276415ab4541900e51ce3" resname="referal">
+        <source>referal</source>
+        <target>реферал</target>
+      </trans-unit>
+      <trans-unit id="8e3f1bbb73f0f6c952fcf873332eae9f" resname="browser">
+        <source>browser</source>
+        <target>браузер</target>
+      </trans-unit>
+      <trans-unit id="c75a5b52a7675610cbfd7ca263280b47" resname="begin page">
+        <source>begin page</source>
+        <target>начальная страница</target>
+      </trans-unit>
+      <trans-unit id="635745283bc1b75a67454fd2d0cf722f" resname="total visits">
+        <source>total visits</source>
+        <target>всего посещений</target>
+      </trans-unit>
+      <trans-unit id="7aea2552dfe7eb84b9443b6fc9ba6e01" resname="tail">
+        <source>tail</source>
+        <target>хвост</target>
       </trans-unit>
     </body>
   </file>

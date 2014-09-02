@@ -70,9 +70,12 @@ class FormController extends Controller
                 $errors = [];
                 /** @var Form $child */
                 foreach ($form as $child) {
-                    $errors[$child->getName()] = array_reduce($child->getErrors(), function($result, FormError $err) {
-                            return $result .= $err->getMessage();
-                        }, null);
+                    foreach ($child->getErrors() as $err) {
+                        /** @var FormError $err */
+                        $errors[$child->getName()] = isset($errors[$child->getName()])
+                            ? $errors[$child->getName()] . $err->getMessage()
+                            : $err->getMessage();
+                    }
                 }
                 return new JsonResponse(['status'=>'error', 'errors'=>$errors, 'message'=>$form->getErrorsAsString()]);
             }

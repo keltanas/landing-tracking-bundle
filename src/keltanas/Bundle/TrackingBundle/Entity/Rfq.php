@@ -142,7 +142,7 @@ class Rfq
     public function setHistory($history)
     {
         $this->history = $history;
-        if ($history->getCounter()) {
+        if ($history) {
             $this->setNumberEntry($history->getCounter());
         }
     }

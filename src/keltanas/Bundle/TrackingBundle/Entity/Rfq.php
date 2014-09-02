@@ -119,7 +119,7 @@ class Rfq
     }
 
     /**
-     * @param \keltanas\Bundle\TrackingBundle\Entity\Form $form
+     * @param Form $form
      */
     public function setForm($form)
     {
@@ -129,7 +129,7 @@ class Rfq
     }
 
     /**
-     * @return \keltanas\Bundle\TrackingBundle\Entity\Form
+     * @return Form
      */
     public function getForm()
     {
@@ -137,16 +137,18 @@ class Rfq
     }
 
     /**
-     * @param \keltanas\Bundle\TrackingBundle\Entity\History $history
+     * @param History $history
      */
     public function setHistory($history)
     {
         $this->history = $history;
-        $this->setNumberEntry($history->getCounter());
+        if ($history->getCounter()) {
+            $this->setNumberEntry($history->getCounter());
+        }
     }
 
     /**
-     * @return \keltanas\Bundle\TrackingBundle\Entity\History
+     * @return History
      */
     public function getHistory()
     {

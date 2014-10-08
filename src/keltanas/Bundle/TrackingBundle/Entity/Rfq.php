@@ -27,7 +27,7 @@ class Rfq
      * @var Form
      *
      * @ORM\ManyToOne(targetEntity="keltanas\Bundle\TrackingBundle\Entity\Form", inversedBy="rfq")
-     * @ORM\JoinColumn(name="form_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="form_id", referencedColumnName="id", nullable=true)
      */
     private $form;
 

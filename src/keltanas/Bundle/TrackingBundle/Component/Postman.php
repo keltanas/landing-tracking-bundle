@@ -38,6 +38,30 @@ class Postman
 
     public function sendMessage($subject, $template, $data, Request $request = null)
     {
+        if ($subject instanceof \Swift_Message) {
+            $message = $subject;
+        } else {
+            $message = $this->createMessage($subject, $template, $data, $request);
+        }
+        $this->mailer->send($message);
+    }
+
+    /**
+     * @param $subject
+     * @param $template
+     * @param $data
+     * @param Request $request
+     * @return mixed
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     * @throws \Doctrine\ORM\TransactionRequiredException
+     * @throws \Exception
+     * @throws \Twig_Error
+     *
+     * @return \Swift_Message
+     */
+    public function createMessage($subject, $template, $data, Request $request = null)
+    {
         $history = null;
         if ($request && $request->cookies->has('tracker_id')) {
             /** @var \keltanas\Bundle\TrackingBundle\Entity\History $history */
@@ -52,6 +76,7 @@ class Postman
                 'data' => $data,
                 'history' => $history,
             ]), 'text/html', 'utf-8');
-        $this->mailer->send($message);
+
+        return $message;
     }
 }
